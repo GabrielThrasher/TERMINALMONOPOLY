@@ -788,6 +788,10 @@ def end_turn():
 
 
 def player_choice():
+    """
+    Simulates a player moves: takes into account the amount of cash on
+    hand, and then does appropriate actions.
+    """
     global bankrupts
     if (players[turn].cash > 0):
         choice = input(
