@@ -387,7 +387,7 @@ def housing_logic(p: MonopolyPlayer, mode: str = "normal", propertyid: str = "",
 
 
 def mortgage_logic():
-    input("\033[37;0HWhat property to mortgage?")
+    pass
 
 
 from datetime import datetime
@@ -842,6 +842,7 @@ def player_choice():
                         ).lower().strip()
 
                 if own_property(turn, property_id):
+                    mortgage_logic()
                     update_history(f"{players[turn]} mortgaged.")
                     break
                 else:
